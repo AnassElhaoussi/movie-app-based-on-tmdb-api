@@ -10,7 +10,7 @@
 
 :root{
     --main-color :#22254b;
-    --navbar-color : #373b69;
+    --secondary-color : #373b69;
     --text-color: rgba(255, 255, 255, 0.856);
 }
 
@@ -20,7 +20,7 @@ body {
 }
 
 .header {
-    background-color: var(--navbar-color);
+    background-color: var(--secondary-color);
     padding: 0.8rem 1rem;
 }
 
@@ -45,32 +45,71 @@ body {
     display: flex;
     justify-content: center;
     padding-top: 3rem;
-    
-    height: 100vh;
     flex-wrap: wrap;
     gap: 2rem;
 }
 
 .card {
+    position: relative;
     max-width: 20rem;
-    min-height: 24rem;
-    background-color: white;
+    background-color: var;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     gap: 0.2rem;
+    border-radius: 0.6rem;
+    background-color: var(--secondary-color);
+    
 }
 
 .card img {
     max-width: 100%;
+    height: auto;
+}
+
+.text-content {
+    padding: 1rem 1rem 0.2rem 1rem;
+    
 }
 
 .main-text {
     display: flex;
-    padding: 1rem 0.8rem ;
     justify-content: space-between;
+    margin-bottom: 0.5rem;
 }
 
+.main-text h3 {
+    color: var(--text-color);
+    font-size: 1.2rem;
+
+}
+
+.main-text p {
+    background-color: var(--main-color);
+    padding: 0.2rem 0.6rem;
+    color: lightgreen;
+    border-radius: 0.3rem;
+}
+
+.overview {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background-color: white;
+    font-size: 0.8rem;
+    padding: 2rem 1rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transform: translateY(100%);
+    transition: transform 0.8s ease ;
+
+}
+
+.card:hover .overview {
+    transform: translateY(0);
+}
 
 
 
